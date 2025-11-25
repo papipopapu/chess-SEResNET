@@ -1,0 +1,32 @@
+# Build artifacts
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+_codeql_build_dir/
+_codeql_detected_source_root
+
+# Compiled executables
+netEval
+chess-seresnet
+
+# Object files
+*.o
+*.obj
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Dependency directories
+FunctionalPlus/
+frugally-deep/
+eigen/
