@@ -84,9 +84,11 @@ The program accepts FEN positions and search depth:
 ```
 fen: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -
 depth: 2
-white: 0.5
+eval: 0.5
 best move: e2e4
 ```
+
+The evaluation score is from White's perspective: values closer to 1.0 favor White, values closer to 0.0 favor Black.
 
 Enter `quit` to exit the program.
 

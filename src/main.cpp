@@ -264,40 +264,41 @@ int main() {
         assert(depth >= 0);
         
         // Evaluate and find best move based on current turn
+        // Score is from White's perspective: 1.0 = White winning, 0.0 = Black winning
         if (pos.turn() == WHITE) {
             switch (depth) {
                 case 0:
-                    std::cout << "white: " << alphaBetaMax<0U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMax<0U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<0U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 1:
-                    std::cout << "white: " << alphaBetaMax<1U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMax<1U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<1U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 2:
-                    std::cout << "white: " << alphaBetaMax<2U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMax<2U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<2U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 3:
-                    std::cout << "white: " << alphaBetaMax<3U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMax<3U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<3U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 4:
-                    std::cout << "white: " << alphaBetaMax<4U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMax<4U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<4U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 5:
-                    std::cout << "white: " << alphaBetaMax<5U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMax<5U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<5U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 6:
-                    std::cout << "white: " << alphaBetaMax<6U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMax<6U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<6U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
@@ -307,37 +308,37 @@ int main() {
         } else {
             switch (depth) {
                 case 0:
-                    std::cout << "black: " << alphaBetaMin<0U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMin<0U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<0U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 1:
-                    std::cout << "black: " << alphaBetaMin<1U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMin<1U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<1U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;        
                     break;
                 case 2:
-                    std::cout << "black: " << alphaBetaMin<2U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMin<2U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<2U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 3:
-                    std::cout << "black: " << alphaBetaMin<3U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMin<3U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<3U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 4:
-                    std::cout << "black: " << alphaBetaMin<4U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMin<4U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<4U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 5:
-                    std::cout << "black: " << alphaBetaMin<5U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMin<5U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<5U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
                 case 6:
-                    std::cout << "black: " << alphaBetaMin<6U>(model, pos, -1.f, 2.f) << std::endl;
+                    std::cout << "eval: " << alphaBetaMin<6U>(model, pos, -1.f, 2.f) << std::endl;
                     bestMove = getBestMove<6U>(model, pos);
                     std::cout << "best move: " << bestMove << std::endl;
                     break;
